@@ -1,0 +1,10 @@
+<% if (page.total > 1){ %>
+  <nav class="page-nav content">
+    <% if (page.next) { %>
+      <a class="next-page" href="<%- url_for(page.next_link) %>">下一页</a>
+    <%}%>
+    <% if (page.prev) { %> 
+      <a class="pre-page" href="<%- url_for(page.prev_link) %>">上一页</a>
+    <%}%>
+  </nav>
+<% } %>

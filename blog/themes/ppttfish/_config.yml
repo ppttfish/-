@@ -1,0 +1,13 @@
+#header
+menu:
+  主页: /
+  个人介绍: /about
+  所有文章: /archives
+
+#网页图标
+favicon: /favicon.ico
+
+#个人链接
+social:
+  github: https://github.com/ppttfish
+  

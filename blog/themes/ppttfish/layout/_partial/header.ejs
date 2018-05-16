@@ -1,0 +1,46 @@
+<div class="side-nav">
+  <div class="nav-logo">
+    <img src="/pic/logo.png"  width="120px" height="120px" alt="">
+  </div>
+</div>
+
+<div class="nav-container">
+  <div class="nav-logo">
+    <h1><a class="head-logo" href="/">PPTTFish</a></h1>
+  </div>
+  <div class="nav-item">
+    <% if (theme.menu) { %>
+      <ul class="nav-item-ul">
+      <% for (name in theme.menu) { %>
+        <% if (url_for(theme.menu[name]) == '/' + path.replace('/index.html', '') || (url_for(theme.menu[name]) == '/' && is_home())) { %>
+          <li class="nav-item-li active">
+            <a href="<%- url_for(theme.menu[name]) %>" class="nav-item-link"><%- name %></a>
+          </li>
+        <% } else { %>
+          <li class="nav-item-li">
+            <a href="<%- url_for(theme.menu[name]) %>" class="nav-item-link"><%- name %></a>
+          </li>
+        <% } %>
+      <% } %>
+          <li class="nav-item-li search-btn">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-search"></use>
+            </svg>
+          </li>
+        </ul>
+    <% } %>
+  </div>
+  <div class="mobile-nav">
+    <div class="search search-btn">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-search"></use>
+      </svg>
+    </div>
+    <div class="menu"></div>
+  </div>
+  <!-- menu框 -->
+  <%- partial('_partial/modal-dialog-menu') %>
+  <!-- search框 -->
+  <%- partial('_partial/modal-dialog-search') %>
+</div>
+

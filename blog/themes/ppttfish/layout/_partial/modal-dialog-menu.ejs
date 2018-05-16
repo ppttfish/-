@@ -1,0 +1,60 @@
+<div class="modal-dialog menu-dialog">
+  <div class="modal-content">
+    <div class="modal-head">
+      <div class="container modal-head-container">
+        <h1><a  class="head-logo" href="/">PPTTFish</a></h1>
+        <div class="modal-close">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-close"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="container">
+        <div class="modal-nav-item">
+          <% if (theme.menu) { %>
+            <ul class="modal-nav-item-ul">
+            <% for (name in theme.menu) { %>
+              <% if (url_for(theme.menu[name]) == '/' + path.replace('/index.html', '') || (url_for(theme.menu[name]) == '/' && is_home())) { %>
+                <li class="modal-nav-item-li active">
+                  <a href="<%- url_for(theme.menu[name]) %>" class="modal-nav-item-link"><%- name %></a>
+                </li>
+              <% } else { %>
+                <li class="modal-nav-item-li">
+                  <a href="<%- url_for(theme.menu[name]) %>" class="modal-nav-item-link"><%- name %></a>
+                </li>
+              <% } %>
+            <% } %>
+              </ul>
+          <% } %>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <ul class="social">
+        <li>
+          <a href="">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-GitHub"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-GitHub"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-GitHub"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

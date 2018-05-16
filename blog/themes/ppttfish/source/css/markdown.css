@@ -1,0 +1,110 @@
+.markdown {
+  /* color: #34495e; */
+  color: #3D3D3D;
+  font-family:  "Microsoft Yahei","Lato","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Verdana,Tahoma,sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.markdown h1, markdown h2, markdown h3, markdown h4 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: .5em;
+}
+
+.markdown h1 {
+  font-family: Lato,"PingFang SC","Microsoft YaHei",sans-serif;
+}
+
+.markdown blockquote, .markdown figure{
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+}
+
+blockquote {
+  padding-left: 16px;
+  margin: 24px 0;
+  border-left: 4px solid #b70038;
+  font-family: "Playfair Display",serif;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: oblique;
+  background-color: #eee;
+}
+
+.markdown figure {
+  font-size: 15px;
+  display: block;
+  overflow-x: auto;
+  border-radius: 6px;
+  background: #1d1f21;
+  color: #c5c8c6;
+  padding: 10px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+}
+
+.markdown figure pre {
+  margin: 0;
+}
+
+.markdown code {
+  border-radius: 2px;
+  background-color: #19CAAD;
+  /* background-color: #5187EC; */
+  color: #fff;
+  padding: 2px;
+  margin: 0 2px;
+}
+
+code, pre {
+  font-family: consolas,Menlo,"PingFang SC","Microsoft YaHei",monospace;
+}
+
+.markdown figure table{
+  background: transparent;
+  width: 100%;
+}
+
+.markdown pre {
+}
+
+
+/* js语法高亮 */
+span .function {
+  color: #00D9F3;
+}
+
+span .string {
+  color: #E7DC60;
+}
+
+span .number {
+  color: #B171FA;
+}
+
+span .attribute {
+  color: #00D9F3
+}
+
+span .selector-class{
+  color: #68D900;
+}
+  
+
+span .keyword{
+  color:#F4606C;
+}
+
+span .tag {
+  color: #F4606C;
+}
+
+span .title {
+  color: #68D900;
+}
+
+
+
+
+
+
+

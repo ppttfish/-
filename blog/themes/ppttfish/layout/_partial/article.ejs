@@ -1,0 +1,36 @@
+<div class="content">
+  <div class="social">
+    <ul>
+      <% if (theme.social) { %>
+        <% for (name in theme.social) { %>
+          <li>
+            <a href="<%- url_for(theme.social[name]) %>">
+              <svg class="icon mygithub" aria-hidden="true">
+                <use xlink:href="#icon-GitHub"></use>
+              </svg>
+            </a>
+          </li>  
+        <% } %>
+      <% } %>
+    </ul>
+  </div>
+  <div class="posts">
+    <ul class="post">
+      <% page.posts.each(function (post) { %>
+        <li>
+          <div class="post-title">
+              <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+            <div class="post-meta">
+              <time class="post-time"><%- date(post.date, "DD.MMM.YYYY") + ( post.tag ? post.tag : '')%></tiem>
+            </div>
+          </div>
+          <!-- <div class="post-content markdown">
+            <%- post.excerpt %>
+          </div> -->
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</div>
+
+<div></div>

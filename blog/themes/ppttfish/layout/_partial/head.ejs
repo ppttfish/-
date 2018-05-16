@@ -1,0 +1,30 @@
+<head>
+  <meta charset="utf-8">
+  <% if(theme.favicon) { %>
+    <link rel="icon" href="<%- config.favicon %>">
+  <% } %>
+
+  <%
+    var title = page.title;
+
+    if (is_archive()) {
+        title = "所有文章";
+    }
+    else if (is_category()) {
+        title = page.category;
+    }
+  %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <style type="text/css">
+    .icon {
+       width: 1em; height: 1em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+    }
+    </style>
+  <%- css('css/base.css') %>
+  <%- css('css/main-css.css') %>
+  <%- css('css/markdown.css') %>
+</head>
