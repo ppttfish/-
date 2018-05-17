@@ -1,13 +1,14 @@
 <div class="side-nav">
   <div class="nav-logo">
-    <img src="/pic/logo.png"  width="120px" height="120px" alt="">
+    <a href="/"><img src="/pic/coder.png"  width="120px" height="120px" alt=""></a>
+    <h1><a class="head-logo" href="/">PPTTfish</a></h1>
+  </div>
+  <div class="author-info">
+    <span>努力努力再努力！</span>
   </div>
 </div>
 
 <div class="nav-container">
-  <div class="nav-logo">
-    <h1><a class="head-logo" href="/">PPTTFish</a></h1>
-  </div>
   <div class="nav-item">
     <% if (theme.menu) { %>
       <ul class="nav-item-ul">
@@ -22,13 +23,18 @@
           </li>
         <% } %>
       <% } %>
-          <li class="nav-item-li search-btn">
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-search"></use>
-            </svg>
-          </li>
-        </ul>
+      </ul>
+      <ul class="search-btn">
+        <li class="nav-item-li">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-search"></use>
+          </svg>
+        </li>
+      </ul>
     <% } %>
+  </div>
+  <div class="mobile-nav">
+    <div class="menu"></div>
   </div>
   <div class="mobile-nav">
     <div class="search search-btn">
@@ -36,7 +42,6 @@
         <use xlink:href="#icon-search"></use>
       </svg>
     </div>
-    <div class="menu"></div>
   </div>
   <!-- menu框 -->
   <%- partial('_partial/modal-dialog-menu') %>

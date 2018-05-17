@@ -1,6 +1,25 @@
-<article class="content markdown">
-    <div class="article-head">
-        <h1><%- page.content %></h1>
+<article class="content">
+    <div class="post">
+    <div class="post-title">
+        <h1><a ><%- page.title %></a></h1>
+    </div>
+    <div class="post-mate">
+        <i class="iconfont icon-04"></i>
+        <time class="post-time"><%- date(page.date, "YYYY-MM-DD")%></time>
+        <ul class="post-tags">
+        <%- page.tags.length %>
+        <% if (page.tags) { %> 
+            <% page.tags.each(function (tag) { %>
+            <li>
+                <i class="iconfont icon-06tags"></i>
+                <a href="<%- url_for(tag.path) %>"><%- tag.name %></a>
+            </li>
+            <% }) %>  
+        <% } %>
+        </ul>
+    </div>
+    <div class="article-head  markdown">
+        <%- page.content %>
     </div>
     <%- partial('_partial/aside') %>
 </article>

@@ -1,6 +1,7 @@
 html {
-  font-size: 16px;
-  font-family: Rubik,Helvetica,Arial,sans-serif;
+  font-size: 15px;
+  /* font-family: Rubik,Helvetica,Arial,sans-serif; */
+  font-family: "PingHei", "PingFang SC", Helvetica Neue, "Work Sans", "Hiragino Sans GB", "Microsoft YaHei", SimSun, sans-serif;
   line-height: 1.5;
 }
 
@@ -16,7 +17,7 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #464646;
 }
 
 ul, li {

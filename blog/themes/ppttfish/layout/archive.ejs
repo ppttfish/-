@@ -1,5 +1,5 @@
 <div class="archive content">
-  <div class="content">
+  <div class="">
     <% 
       var years = {};
       site.posts.sort('date').reverse().forEach(function(post){
@@ -12,7 +12,7 @@
     %>    
     <% Object.keys(years).reverse().forEach(function(year){  %>
       <div class="year-list">
-        <h3><%= year %></h3>
+        <h1><%= year %></h1>
         <ul>
           <% years[year].map(function(post){  %>
             <li >
