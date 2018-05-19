@@ -9,7 +9,6 @@
           <i class="iconfont icon-04"></i>
           <time class="post-time"><%- date(post.date, "YYYY-MM-DD")%></time>
           <ul class="post-tags">
-            <%- post.tags.length %>
             <% if (post.tags) { %> 
               <% post.tags.each(function (tag) { %>
                 <li>
@@ -27,23 +26,6 @@
         </div>
       </div>
     <% }) %>
-    
-    <!-- <ul class="post">
-      <% page.posts.each(function (post) { %>
-        <li>
-          <div class="post-title">
-              <a href="<%- url_for(post.path) %>"><%- post.title %></a>
-            <div class="post-meta">
-              <time class="post-time"><%- date(post.date, "DD.MMM.YYYY") + ( post.tag ? post.tag : '')%></tiem>
-            </div>
-          </div>
-          <div class="post-content markdown">
-            <%- post.excerpt %>
-          </div>
-        </li>
-      <% }) %>
-    </ul> -->
   </div>
+  <%- partial('_partial/paginator') %>
 </div>
-
-<div></div>

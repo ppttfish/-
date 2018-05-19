@@ -7,7 +7,6 @@
         <i class="iconfont icon-04"></i>
         <time class="post-time"><%- date(page.date, "YYYY-MM-DD")%></time>
         <ul class="post-tags">
-        <%- page.tags.length %>
         <% if (page.tags) { %> 
             <% page.tags.each(function (tag) { %>
             <li>
@@ -21,5 +20,6 @@
     <div class="article-head  markdown">
         <%- page.content %>
     </div>
+    <div id="comment"></div>
     <%- partial('_partial/aside') %>
 </article>

@@ -22,12 +22,12 @@
   position: fixed;
   box-sizing: border-box;
   width: 75%;
+  padding: 1.2em;
   top: 0;
   right: 0;
   text-align: center;
-  /* max-width: 1200px; */
   margin: 0 auto;
-  padding: 1.2em;
+  /* padding: 1.2em; */
   background-color: #fff;
   border-bottom: 1px solid #ccc;
   border-left: 1px solid #ccc;
@@ -55,6 +55,8 @@
   border-radius: 3px;
 }
 
+/* 导航栏 */
+
 .nav-item {
   display: flex;
   justify-content: space-between;
@@ -63,7 +65,6 @@
 .nav-item-ul {
   display: inline-block;
   z-index: 1;
-  background-color: #fff;
   padding: 0 20px;
 }
 
@@ -79,6 +80,20 @@
   font-weight: 300;
 }
 
+.active a {
+  color: #F4606C;
+}
+
+/* .li-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  background-color: #F4606C;
+  width: 50px;
+  height: 2px;
+  transition:  all .3s;
+} */
+
 .search-btn {
   display: inline-block;
 }
@@ -86,16 +101,6 @@
 .search-btn:hover {
   cursor: pointer;
 }
-
-/* .nav-item::after {
-  content: '';
-  display: block;
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  top: 50%;
-  background-color: #ecf0f1;
-} */
 
 /* 导航模态框 */
 .menu-dialog, .search-dialog {
@@ -228,6 +233,7 @@
 
 .post {
   border-bottom: 1px solid #f2f2f2;
+  line-height: 1.9em;
 }
 
 .post-title h1{
@@ -261,6 +267,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1.2em;
     width: 100%;
     border-left: 0;
   }
@@ -451,20 +458,13 @@ article {
 
 /* 分页 */
 .page-nav {
-  position: relative;
-}
-
-.content::after {
-  content: '';
-  display: block;
-  overflow: hidden;
+  padding: 2em .2em;
 }
 
 .page-nav a {
   box-sizing: border-box;
   background-color: #fff;
   color: #666;
-  padding: .3em .5em;
   border-radius: 4px;
   opacity: .8;
   transition: all .2s ease-in-out;
@@ -476,7 +476,49 @@ article {
 }
 
 .next-page {
+  float: right;
+}
+
+.pre-page {
+  float: left;
+}
+
+/* 评论 */
+
+#comment {
+  margin-top: 100px;
+}
+
+/* 返回顶部 */
+
+.return-top {
+  display: none;
+  position: fixed;
+  right: .5em;
+  bottom: 3.8em;
+  z-index: 2;
+}
+
+.return-top:hover::before {
+  content: '返回顶部';
+  display: block;
   position: absolute;
-  right: 0;
-  top: -1em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .7);
+  font-size: 14px;
+  padding: .3em;
+  border-radius: 5px;
+  top: -35px;
+  right: .2em;
+  white-space:nowrap;
+}
+
+.return-top:hover::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 3px solid;
+  border-color: rgba(0, 0, 0, .7) transparent transparent ;
+  top: -6px;
+  right: 1em;;
 }

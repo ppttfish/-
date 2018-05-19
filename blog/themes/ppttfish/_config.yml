@@ -1,12 +1,12 @@
 #header
 menu:
   主页: /
-  个人介绍: /about
+  关于: /about
   所有文章: /archives
   标签: /tags
 
 #网页图标
-favicon: /favicon.ico
+favicon: /favicon
 
 #个人链接
 social:

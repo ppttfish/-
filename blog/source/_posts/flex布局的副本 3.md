@@ -7,7 +7,7 @@ tags:
 ---
 
 看了阮老师的教程之后，自己模仿boostrap的命名格式，设置了自己的row和col属性。
-本文使用的模板引擎为 ejs，使用的 CSS 预处理器为 stylus。这也是 hexo 项目预装了的 render 插件，如果想使用其他模板引擎或者其他 CSS 预处理器，可以安装相对应的 render 插件。例如我的 Even 主题使用的是 Swig 与 SCSS。m
+本文使用的模板引擎为 ejs，使用的 CSS 预处理器为 stylus。这也是 hexo 项目预装了的 render 插件，如果想使用其他模板引擎或者其他 CSS 预处理器，可以安装相对应的 render 插件。例如我的 Even 主题使用的是 Swig 与 SCSS。
 仿宋
 
 > 简·拉基·茨德是一位吟唱诗人，他的代表作是 《无聊的时候》

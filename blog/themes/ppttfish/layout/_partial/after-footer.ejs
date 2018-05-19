@@ -1,2 +1,33 @@
 <%- js("js/iconfont.js") %>
 <%- js("js/index.js") %>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+<script>
+  new Valine({
+    el: '#comment' ,
+    notify:false, 
+    verify:true, 
+    appId: 'TTJ9PFLx5So5LclEbO8dxjYb-gzGzoHsz',
+    appKey: '66jwFogAxr3A0tsyz7UyonNr',
+    placeholder: 'just go go',
+    path:window.location.pathname, 
+    avatar:'retro' 
+  });
+</script>
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'GitHub Application Client ID',
+    clientSecret: 'GitHub Application Client Secret',
+    repo: 'GitHub repo',
+    owner: 'GitHub repo owner',
+    admin: ['GitHub repo owner and collaborators, only these guys can initialize github issues'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+</script> -->

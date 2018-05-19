@@ -4,27 +4,45 @@
   var menuModal = document.getElementsByClassName('menu-dialog')[0];
   var searchModal = document.getElementsByClassName('search-dialog')[0];
   var closeBtn = document.getElementsByClassName('modal-close');
+  var returnTop = document.getElementById('return-top');
   
-  console.log(closeBtn);
-  
+  // 回到顶部
+  window.onscroll = function() {
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    returnTop.style.display = scrollTop > 500 ? 'block' : 'none';
+  };
+
+  returnTop.onclick = function () {
+    scrollToptimer = setInterval(function () {
+      var top = document.body.scrollTop || document.documentElement.scrollTop;
+      var speed = top / 1.5;
+      if (document.body.scrollTop!=0) {
+          document.body.scrollTop -= speed;
+      }else {
+          document.documentElement.scrollTop -= speed;
+      }
+      if (top == 0) {
+          clearInterval(scrollToptimer);
+      }
+    }, 30); 
+  }
+
 
   function showMoboileMenu() {
-    menuModal.style.display = "block";
+    menuModal.style.display = 'block';
   }
 
   function showSearch() {
-    searchModal.style.display = "block";
+    searchModal.style.display = 'block';
   }
 
   function closeMobileMenu() {
-    menuModal.style.display = "none";
+    menuModal.style.display = 'none';
   }
 
   function closeSearch() {
-    searchModal.style.display = "none";
+    searchModal.style.display = 'none';
   }
-
-
 
   search[0].addEventListener('click', showSearch, false);
   search[1].addEventListener('click', showSearch, false);
@@ -32,4 +50,3 @@
   closeBtn[0].addEventListener('click', closeMobileMenu, false);
   closeBtn[1].addEventListener('click', closeSearch, false);
 })();
-
