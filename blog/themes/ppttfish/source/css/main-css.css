@@ -585,3 +585,40 @@ article {
 .tags-total {
   text-align: right;
 }
+
+/* 手机端首页 */
+@media (max-width: 767px) {
+  .side-nav {
+    padding: 8em 0;
+    background: linear-gradient(to bottom, #56ccf2, #2f80ed);
+  }
+
+  .nav-container {
+    background-color: transparent;
+  }
+
+  .content {
+    box-sizing: border-box;
+    /* margin-top: 2em; */
+    margin: .5em;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    background: #fff;
+  }
+
+  .nav-logo {
+    margin-top: 80px;
+  }
+
+  .nav-container {
+    border: 0;
+  }
+
+  .head-logo {
+    color: #fff;
+  }
+  .author-info span {
+    color: #fff;
+  }
+}

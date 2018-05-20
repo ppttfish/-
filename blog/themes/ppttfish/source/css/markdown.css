@@ -43,7 +43,7 @@ blockquote {
 }
 
 .markdown figure pre {
-  margin: 0;
+  margin: 0 .5em;
 }
 
 .markdown code {
