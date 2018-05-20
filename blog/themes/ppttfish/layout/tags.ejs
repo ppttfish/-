@@ -1,0 +1,14 @@
+<div class="tags">
+  <h2>标签</h2>
+  <div class="tags-box">
+    <%- list_tags() %>
+    <!-- <% site.tags.each(function (tag) { %>
+      <a href="<%- url_for('tags') + '/' + tag.name %>"><%- tag.name %></a>
+    <% }) %> -->
+  </div>
+  <div class="tags-total">
+    <span>总共</span>
+    <span><%- site.tags.length %></span>
+    <span>个标签</span>
+  </div>
+</div>

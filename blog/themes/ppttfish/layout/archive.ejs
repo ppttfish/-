@@ -1,31 +1,58 @@
 <div class="archive content">
-  <div class="">
-    <% 
-      var years = {};
-      site.posts.sort('date').reverse().forEach(function(post){
-          var year = post.date.year()
-          if(years[year]===undefined){
-              years[year] = [];
-          }
-          years[year].push(post);
-      });
-    %>    
-    <% Object.keys(years).reverse().forEach(function(year){  %>
-      <div class="year-list">
-        <h1><%= year %></h1>
-        <ul>
-          <% years[year].map(function(post){  %>
-            <li >
-              <time><%- post.date.toJSON().substring(5, 10) %></time>
-              <a href="<%- config.root %><%- post.path %>">
-                <span>
-                    <%- post.title ? post.title : __('untitled') %>
-                </span>
-              </a>
-            </li>
-          <% }) %>
-        </ul>
-      </div>
-    <% }) %>    
-  </div>
+    <% if (page.path.substring(0, 1) == 't') { %>
+      <% var ctag = page.path.substring(path.indexOf('/') + 1, path.lastIndexOf('/')) %>
+      <h1><%- ctag %></h1>
+
+      <% site.posts.each(function(post) { %>
+        <% post.tagBox = []%>
+        <% post.tags.each(function(tag) { %>
+          <% post.tagBox.push(tag); %>
+        <% }) %>
+        <% console.log(post.tagBox) %>
+      <% }) %>
+      <% 
+        var years = {};
+        site.posts.sort('date').reverse().forEach(function(post){
+            var year = post.date.year()
+            if(years[year]===undefined){
+                years[year] = [];
+            }
+            if (ctag in post.tagBox) {
+              years[year].push(post)
+            }
+        });
+      %>    
+    <% } else { %>
+      <% 
+        var years = {};
+        site.posts.sort('date').reverse().forEach(function(post){
+            var year = post.date.year()
+            if(years[year]===undefined){
+                years[year] = [];
+            }
+            years[year].push(post);
+        });
+      %>      
+    <% } %>
+    
+    <div class="">
+      
+      <% Object.keys(years).reverse().forEach(function(year){  %>
+        <div class="year-list">
+          <h1><%= year %></h1>
+          <ul>
+            <% years[year].map(function(post){  %>
+              <li >
+                <time><%- post.date.toJSON().substring(5, 10) %></time>
+                <a href="<%- config.root %><%- post.path %>">
+                  <span>
+                      <%- post.title ? post.title : __('untitled') %>
+                  </span>
+                </a>
+              </li>
+            <% }) %>
+          </ul>
+        </div>
+      <% }) %>    
+    </div>
 </div>
