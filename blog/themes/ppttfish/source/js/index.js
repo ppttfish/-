@@ -7,22 +7,45 @@
   var returnTop = document.getElementById('return-top');
   var navContainer = document.getElementsByClassName('nav-container')[0];
   
+  const getScollTop= () => document.documentElement.scrollTop || document.body.scrollTop;
+
   // 回到顶部
   window.onscroll = function() {
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    returnTop.style.display = scrollTop > 500 ? 'block' : 'none';
-    var windowWidth = window.screen.availWidth;
+    var scrollTop = getScollTop(); 
+   
+    return function() { //闭包保留上次的滚动值 来实现下滑隐藏导航 上滑出现导航
+      var windowWidth = window.screen.availWidth;
 
-    if (windowWidth < 1200) {
-      if (scrollTop >= 522) {
-        navContainer.style.background = '#fff';
-        navContainer.style.color = 'black';
+      if (scrollTop > getScollTop()) {
+        console.log('up');
+        $(navContainer).fadeIn();
+        scrollTop = getScollTop();
+      } else if(scrollTop < getScollTop() && (windowWidth > 1200) && (getScollTop() > 110)) {
+        $(navContainer).fadeOut();
+        console.log('down');
+        scrollTop = getScollTop();
+      } else {
+        scrollTop = getScollTop();
       }
-      if (scrollTop < 522 ) {
-        navContainer.style.background = 'transparent';
+
+      // returnTop.style.display = scrollTop > 500 ? 'block' : 'none';
+      if (scrollTop > 500) {
+        $(returnTop).fadeIn();
+      } else {
+        $(returnTop).fadeOut()
       }
-    }
-  };
+      
+      if (windowWidth < 1200) {
+        if (scrollTop >= 522) {
+          navContainer.style.background = '#fff';
+          navContainer.style.color = 'black';
+        }
+        if (scrollTop < 522 ) {
+          navContainer.style.background = 'transparent';
+        }
+      }
+    } 
+  }();
 
   returnTop.onclick = function () {
     // scrollToptimer = setInterval(function () {
@@ -62,4 +85,10 @@
   menu.addEventListener('click', showMoboileMenu, false);
   closeBtn[0].addEventListener('click', closeMobileMenu, false);
   closeBtn[1].addEventListener('click', closeSearch, false);
+
+  console.log('你，\n一会看我，\n一会看云，\n我觉得，\n你看我时很远，\n你看云时很近\n');
+
+
+
 })();
+

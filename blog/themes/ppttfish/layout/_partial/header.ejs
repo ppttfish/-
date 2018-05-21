@@ -1,11 +1,30 @@
 <div class="side-nav">
+  <% if (is_post()) {%> 
+    <div class="side-nav-directory">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-mulu1"></use>
+      </svg>
+    </div>
+  <% } %>
+
   <div class="nav-logo">
-    <a href="/"><img src="/pic/fish.svg"  width="120px" height="120px" alt=""></a>
-    <h1><a class="head-logo" href="/">PPTTFish</a></h1>
-  </div>
-  <div class="author-info">
-    <span>努力努力再努力！</span>
-  </div>
+      <a href="/"><img src="/pic/fish.svg"  width="120px" height="120px" alt=""></a>
+      <h1><a class="head-logo" href="/">PPTTFish</a></h1>
+    </div>
+    <div class="author-info">
+      <span>努力呀，奋斗呀</span>
+    </div>
+    <div class="social">
+      <a href="<%- theme.social.github %>" target="_blank">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-github"></use>
+        </svg></a>
+      <a href="<%- theme.social.ins %>" target="_blank">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-ins1"></use>
+        </svg>
+      </a>
+    </div>
 </div>
 
 <div class="nav-container">

@@ -6,7 +6,18 @@
 .side-nav {
   text-align: center;
   background-color: #fff;
-  border-right: 1px solid #ccc;
+}
+
+.side-nav-directory {
+  position: absolute;
+  right: 0;
+}
+
+.side-nav-directory svg {
+  margin: .5em;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
 }
 
 /* .side-nav::before {
@@ -32,13 +43,12 @@
   width: 75%;
   padding: 1.2em;
   top: 0;
-  right: 0;
+  right: .2em;
   text-align: center;
   margin: 0 auto;
   /* padding: 1.2em; */
   background-color: #fff;
-  border-bottom: 1px solid #ccc;
-  border-left: 1px solid #ccc;
+  box-shadow: rgba(26, 26, 26, 0.1) 0px 1px 3px;
 }
 
 .nav-logo {
@@ -92,16 +102,6 @@
   /* color: #F4606C; */
   color: #b70038;
 }
-
-/* .li-indicator {
-  position: absolute;
-  bottom: 0;
-  left: 10px;
-  background-color: #F4606C;
-  width: 50px;
-  height: 2px;
-  transition:  all .3s;
-} */
 
 .search-btn {
   display: inline-block;
@@ -165,7 +165,14 @@
 }
 
 .social {
-  text-align: right;
+  text-align: center;
+  margin: 1em;
+}
+
+.social svg {
+  margin-right: .5em;
+  width: 20px;
+  height: 20px;
 }
 
 .social li a {
@@ -229,11 +236,13 @@
   position: absolute;
 }
 
+
 /* 首页文章 */
 .content {
   box-sizing: border-box;
   margin-top: 2em;
   padding: 2em;
+  min-height: 90vh;
 }
 
 .post a {
@@ -371,13 +380,18 @@
 @media (min-width: 1200px) {
   .side-nav {
     position: fixed;
-    width: 25%;
+    width: 24%;
     height: 100%;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
   }
 
   .content {
     float: right;
     width: 75%;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    margin: 4em .2em .2em 0;
   }
 
   .container {
@@ -445,12 +459,10 @@ article {
 }
 
 /* 归档 */
-.archive {
-  font-size: 10px;
-}
 
 .archive h1 {
   margin-top: 2em;
+  font-size: 22px;
 }
 
 .year-list li {
@@ -552,8 +564,6 @@ article {
 /* 标签页 */
 .tags {
   box-sizing: border-box;
-  margin-top: 2em;
-  padding: 2em;
 }
 
 .tags-box {
@@ -590,11 +600,13 @@ article {
 @media (max-width: 1199px) {
   .side-nav {
     padding: 8em 0;
-    background: linear-gradient(to bottom, #56ccf2, #2f80ed);
+    /* background: linear-gradient(to bottom, #56ccf2, #2f80ed); */
+    background: #56ccf2;
   }
 
   .nav-container {
     background-color: transparent;
+    box-shadow: none;
   }
 
   .content {
@@ -621,4 +633,30 @@ article {
   .author-info span {
     color: #fff;
   }
+}
+
+/* 底部导航栏 */
+.foot-nav {
+  float: right;
+  margin: .5em;
+  text-align: center;
+}
+
+.foot-nav ul {
+  display: inline-block;
+}
+
+.foot-nav li {
+  margin-right: 5px;
+}
+
+.foot-nav li span {
+  color: #003569;
+  margin: .5em;
+}
+
+.mylogo {
+  margin-left: 16em;
+  margin-right: 2em;
+  color: #999;
 }
