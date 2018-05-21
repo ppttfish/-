@@ -587,7 +587,7 @@ article {
 }
 
 /* 手机端首页 */
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .side-nav {
     padding: 8em 0;
     background: linear-gradient(to bottom, #56ccf2, #2f80ed);
