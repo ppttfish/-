@@ -1,15 +1,20 @@
-class Animal {
-  constructor() {
-    this.type = '动物';
-  }
-}
+const getScroll = () => document.documentElement.scrollTop 
+                        || document.body.scrollTop;
+window.onscroll = (() => {
+  let oldScrollTop = getScroll();
 
-class Cat extends Animal {
-  constructor(name) {
-    super();
-    this.name = name;
-  }
-}
+  return (scrollTop) => {
+    let newScrollTop = getScroll();
 
-const cat = new Cat('花花');
-console.log(cat.type);
+    if (oldScrollTop > newScrollTop) {
+      console.log('up');
+      $('#nav').fadeIn();
+      oldScrollTop = newScrollTop;
+    } else {
+      console.log('down');
+      $('#nav').fadeOut();
+      oldScrollTop = newScrollTop;
+    }
+  }
+})();
+
