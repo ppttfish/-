@@ -65,7 +65,11 @@ code, pre {
 }
 
 .markdown img {
-  width: 100%;
+  width: 50%;
+}
+
+.markdown u {
+  letter-spacing: 1px;
 }
 
 

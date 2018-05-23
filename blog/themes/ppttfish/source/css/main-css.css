@@ -259,9 +259,30 @@
   transition: all 1s ease-in-out;
 }
 
-.post-title h1 a:hover {
-  border-bottom: 1px solid black;
+.post-title a {
+  display: inline-block;
+  position: relative;
 }
+
+.post-title a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  border-bottom: solid;
+  transition: width .2s ease-in-out;
+  transform: translate(-50%);
+}
+
+.post-title a:hover::after {
+  width: 100%;
+}
+
+/* .post-title h1 a:hover {
+  border-bottom: 1px solid black;
+} */
 
 .post-mate, .post-mate i, .post-tags li a {
   font-size: 12px;
@@ -321,7 +342,7 @@
   }
 
   .modal-head {
-    margin: 20px 0 0px 4px;
+    margin: 20px 0 0px 4px; 
   }
 
   /* article .post-title {
@@ -460,9 +481,16 @@ article {
 
 /* 归档 */
 
-.archive h1 {
-  margin-top: 2em;
-  font-size: 22px;
+.archive-year {
+  /* margin-top: 2em;
+  font-size: 22px; */
+  color: #999;
+  font-family: Courier,Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+
+.year-list ul {
+  list-style-type: disc;
+  margin-top: 1em;
 }
 
 .year-list li {
@@ -477,17 +505,20 @@ article {
 } 
 
 .year-list time {
-  line-height: 1;
-  font-size: 14px;
-  color: #5d738d;
-  letter-spacing: 1px;
+  color: #666;
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size: 13px;
 }
 
 .year-list li a {
-  font-size: 20px;
-  /* color: #428bca; */
-  color: #8f8f8f;
-  font-family: STFangSong, Helvetica, Arial, Vernada, Tahoma, STXihei, "Microsoft YaHei", "Songti SC", SimSun, Heiti, sans-serif;
+  /* font-family: STFangSong, Helvetica, Arial, Vernada, Tahoma, STXihei, "Microsoft YaHei", "Songti SC", SimSun, Heiti, sans-serif; */
+  font-family: Consolas, "Xin Gothic", "lucida grande", 
+                  "lucida sans unicode", lucida, helvetica, 
+                  "Hiragino Sans GB", "Microsoft YaHei", 
+                  "WenQuanYi Micro Hei", sans-serif;
+  color: #111;
+  font-size: 16px;
+  line-height: 1.7;
 }
 
 .year-list li a:hover {
@@ -660,3 +691,4 @@ article {
   margin-right: 2em;
   color: #999;
 }
+

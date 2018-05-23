@@ -1,53 +1,74 @@
 <div class="archive content">
-    <% if (page.path.substring(0, 1) == 't') { %>
+ 
+    <% if (is_tag()) { %>
       <% var ctag = page.path.substring(path.indexOf('/') + 1, path.lastIndexOf('/')) %>
       <h1><%- ctag %></h1>
+        <%
+        var years = {};
+        site.posts.sort('date').reverse().forEach(function(post){
+            var year = post.date.year();
+            if(years[year]===undefined){
+                years[year] = [];
+            }
+            var hasTag = 0;
+            post.tags.each(function(tag) {
+              if (ctag == tag.name) {
+                hasTag = 1;
+              }
+            });
+            
+            if (hasTag) {
+              years[year].push(post);
+            }
+        });
+        %>
+      <!-- Object.keys(years).reverse().forEach(function(year) {
+        years[year].forEach(function(post) {
+          post.flag = 1;
+          console.log('删除之前:' + post.title);
+          post.tags.each(function(tag) {
+            console.log(tag.name);
+            if (ctag == tag.name) {
+              post.flag = 0;
+            }
+          });
 
-      <% site.posts.each(function(post) { %>
-        <% post.tagBox = []%>
-        <% post.tags.each(function(tag) { %>
-          <% post.tagBox.push(tag); %>
-        <% }) %>
-        <% console.log(post.tagBox) %>
-      <% }) %>
-      <% 
-        var years = {};
-        site.posts.sort('date').reverse().forEach(function(post){
-            var year = post.date.year()
-            if(years[year]===undefined){
-                years[year] = [];
-            }
-            if (ctag in post.tagBox) {
-              years[year].push(post)
-            }
+          if (post.flag) {
+            years[year].splice(years[year].indexOf(post), 1);
+          }
+        })
+
+        years[year].map(function(post) {
+          console.log(post.title + post.flag);
         });
-      %>    
+      })
+      %> -->
+
     <% } else { %>
-      <% 
-        var years = {};
-        site.posts.sort('date').reverse().forEach(function(post){
-            var year = post.date.year()
-            if(years[year]===undefined){
-                years[year] = [];
-            }
-            years[year].push(post);
-        });
-      %>      
+      <%
+      var years = {};
+      site.posts.sort('date').reverse().forEach(function(post){
+          var year = post.date.year()
+          if(years[year]===undefined){
+              years[year] = [];
+          }
+          years[year].push(post);
+      });
+      %>
     <% } %>
     
     <div class="">
-      
+ 
       <% Object.keys(years).reverse().forEach(function(year){  %>
         <div class="year-list">
-          <h1><%= year %></h1>
+          <span class="archive-year"><%= year %></span>
           <ul>
             <% years[year].map(function(post){  %>
               <li >
                 <time><%- post.date.toJSON().substring(5, 10) %></time>
+                <span> » </span>
                 <a href="<%- config.root %><%- post.path %>">
-                  <span>
-                      <%- post.title ? post.title : __('untitled') %>
-                  </span>
+                  <%- post.title ? post.title : __('untitled') %>
                 </a>
               </li>
             <% }) %>
