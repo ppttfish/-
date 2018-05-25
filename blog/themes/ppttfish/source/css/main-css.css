@@ -130,10 +130,12 @@
 /* 导航模态框 */
 .menu-dialog, .search-dialog {
   display: none;
+  /* height: 0; */
 }
 
 .modal-dialog {
   /* display: none;   */
+  text-align: center;
   position: fixed;
   left: 0; top: 0; right: 0; bottom: 0;
   background-color: rgba(255, 255, 255, .95);
@@ -212,11 +214,11 @@
 .modal-close:hover {
   color: #00008B;
   cursor: pointer;
-  transform: rotate(90deg);  
-  -webkit-transform: rotate(90deg);  
-  -moz-transform: rotate(90deg);  
-  -o-transform: rotate(90deg);  
-  -ms-transform: rotate(90deg);  
+  transform: rotate(180deg);  
+  -webkit-transform: rotate(180deg);  
+  -moz-transform: rotate(180deg);  
+  -o-transform: rotate(180deg);  
+  -ms-transform: rotate(180deg);  
 }
 
 .mobile-nav {
