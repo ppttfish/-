@@ -10,6 +10,12 @@ tags:
 本文使用的模板引擎为 ejs，使用的 CSS 预处理器为 stylus。这也是 hexo 项目预装了的 render 插件，如果想使用其他模板引擎或者其他 CSS 预处理器，可以安装相对应的 render 插件。例如我的 Even 主题使用的是 Swig 与 SCSS。m
 仿宋
 
+[百度][baidu]
+
+[baidu]: http://baidu.com
+
+
+
 > 简·拉基·茨德是一位吟唱诗人，他的代表作是 《无聊的时候》
 
 <!-- more -->

@@ -13,20 +13,36 @@
   right: 0;
 }
 
+.side-nav-directory:hover::before {
+  content: '阅读中...';
+  display: block;
+  position: absolute;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .7);
+  font-size: 12px;
+  padding: .3em;
+  border-radius: 5px;
+  white-space:nowrap;
+  left: -4em;
+  top: .7em;
+}
+
+.side-nav-directory:hover::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 3px solid;
+  border-color:  transparent transparent  transparent rgba(0, 0, 0, .7);
+  top: 1.2em;
+  left: .3em;
+}
+
 .side-nav-directory svg {
   margin: .5em;
   height: 25px;
   width: 25px;
   cursor: pointer;
 }
-
-/* .side-nav::before {
-  content: '';
-  display: block;
-  border: 50px solid;
-  border-color: turquoise transparent transparent;
-  width: 0;
-} */
 
 .nav-logo {
   margin-top: 180px;

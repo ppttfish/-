@@ -55,3 +55,14 @@ year.map((post) => {
   
   console.log(post.title);
 });
+
+var hasTag = 0;
+            post.tags.each(function(tag) {
+              if (ctag == tag) {
+                hasTag = 1;
+              }
+            });
+            
+            if (hasTag) {
+              years[year].push(post);
+            }
