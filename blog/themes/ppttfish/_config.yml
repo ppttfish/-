@@ -12,4 +12,8 @@ favicon: /fish.png
 social:
   github: https://github.com/ppttfish
   ins: https://www.instagram.com/fish_cola/
-  
+
+disqus:
+  enable: true
+  shortname: ppttfish    #your name
+  count: true

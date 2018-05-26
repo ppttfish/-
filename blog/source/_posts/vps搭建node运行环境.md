@@ -259,4 +259,4 @@ systemctl enable nginx.service
 
 ### 结束语
 
-至此，就完成了基本的node环境配置，其他的软件我以后再添加。
+至此，就完成了基本的node环境配置，相关服务器端node运行实例[点我](http://localhost:4000/2018/05/26/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E8%BF%90%E8%A1%8Cnode%E7%A8%8B%E5%BA%8F/)查看。
