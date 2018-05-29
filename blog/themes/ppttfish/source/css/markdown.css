@@ -11,7 +11,7 @@
 }
 
 .markdown h2 {
-  border-bottom: 1px solid #ddd;
+  /* border-bottom: 1px solid #ddd; */
   padding: 10px 0;
 }
 
@@ -80,7 +80,8 @@ blockquote {
 }
 
 .markdown a {
-  color: #42b983;
+  /* color: #42b983; */
+  color: #F4606C;
   font-weight: 600;
 }
 

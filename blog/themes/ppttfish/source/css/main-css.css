@@ -268,12 +268,14 @@
 }
 
 .post {
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #ddd;
   line-height: 1.9em;
+  /* padding-bottom: 1em; */
 }
 
 .post-title h1{
-  margin-bottom: .4em;
+  margin-top: 1.5em;
+  margin-bottom: .3em;
   transition: all 1s ease-in-out;
 }
 
@@ -317,6 +319,16 @@
 
 .post-tags a:hover {
   color: #428bca;
+}
+
+
+.post-readmore a {
+  /* color: #e96900; */
+  color: #5d738d;
+}
+
+.post-readmore a:hover {
+  color: #F4606C;
 }
 
 @media (max-width: 767px) {
@@ -430,7 +442,7 @@
     background: #fff;
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(26,26,26,.1);
-    margin: 4em .2em .2em 0;
+    margin: 3em .2em .2em 0;
   }
 
   .container {

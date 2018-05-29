@@ -9,11 +9,9 @@ tag:
 
 之前买了搬瓦工的vps，只是在上边搭翻墙的梯子，现在准备开始做demo页面时候，想着顺便可以用`node`写一点后台代码，于是开始在vps上配置node环境。
 
-我的vps安装的是`debian 9`，具体的安装以及设置可以移步去隔壁宿舍大佬的[博客][blog]。我在这里只是记载一下我的步骤(简化了一些)。
+我的vps安装的是`debian 9`，具体的安装以及设置可以移步去隔壁宿舍大佬的[博客](https://rinchan.me/index.php/archives/18/)。我在这里只是记载一下我的步骤(简化了一些)。
 
 <!-- more -->
-
-[blog]: rinchan.me/index.php/archives/18/
 
 ## 安装debian9
 
@@ -34,6 +32,14 @@ ssh root@服务器ip地址 -p 8848
 ```
 
 连接之后开始更新你的`debian`并安装一些我们需要的软件，因为搬瓦工自带的系统是精简版，很多我们需要的东西都没有。
+
+### 更新软件包
+
+```
+apt update && apt -y full-upgrade && shutdown -r now
+```
+
+更新的时候会弹出一个界面，直接回车就行。
 
 ### 安装所需安装包
 

@@ -24,6 +24,9 @@
             <%- post.excerpt %>
           </div>
         </div>
+        <p class="post-readmore">
+          <a href="<%- url_for(post.path) %>">阅读全文 »</a>
+        </p>
       </div>
     <% }) %>
   </div>
