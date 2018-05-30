@@ -1,7 +1,3 @@
-/* body {
-  border: 8px solid #f4f6f8;
-} */
-
 /* 侧边导航 */
 .side-nav {
   text-align: center;
@@ -62,9 +58,9 @@
   right: .2em;
   text-align: center;
   margin: 0 auto;
-  /* padding: 1.2em; */
   background-color: #fff;
   box-shadow: rgba(26, 26, 26, 0.1) 0px 1px 3px;
+  z-index: 1;
 }
 
 .nav-logo {
@@ -214,11 +210,11 @@
 .modal-close:hover {
   color: #00008B;
   cursor: pointer;
-  transform: rotate(180deg);  
   -webkit-transform: rotate(180deg);  
   -moz-transform: rotate(180deg);  
   -o-transform: rotate(180deg);  
   -ms-transform: rotate(180deg);  
+  transform: rotate(180deg);  
 }
 
 .mobile-nav {
@@ -247,8 +243,13 @@
    position: absolute; 
    left: 0; 
 }
-.menu:before { top: 5px; box-shadow: 0 7px #000; }
-.menu:after { bottom: 5px; }
+.menu:before {
+   top: 5px;
+   box-shadow: 0 7px #000; 
+}
+.menu:after {
+    bottom: 5px;
+}
 
 .searh-body-icon {
   position: absolute;
@@ -696,29 +697,4 @@ article {
   }
 }
 
-/* 底部导航栏 */
-.foot-nav {
-  float: right;
-  margin: .5em;
-  text-align: center;
-}
-
-.foot-nav ul {
-  display: inline-block;
-}
-
-.foot-nav li {
-  margin-right: 5px;
-}
-
-.foot-nav li span {
-  color: #003569;
-  margin: .5em;
-}
-
-.mylogo {
-  margin-left: 16em;
-  margin-right: 2em;
-  color: #999;
-}
 
