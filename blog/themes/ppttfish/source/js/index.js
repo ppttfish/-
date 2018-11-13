@@ -6,7 +6,7 @@
   var closeBtn = document.getElementsByClassName('modal-close');
   var returnTop = document.getElementById('return-top');
   var navContainer = document.getElementsByClassName('nav-container')[0];
-  console.log(closeBtn);
+  // console.log(closeBtn);
   
   const getScollTop= () => document.documentElement.scrollTop || document.body.scrollTop;
 
@@ -82,11 +82,11 @@
     searchModal.style.display = 'none';
   }
 
-  search[0].addEventListener('click', showSearch, false);
-  search[1].addEventListener('click', showSearch, false);
+  // search[0].addEventListener('click', showSearch, false);
+  // search[1].addEventListener('click', showSearch, false);
   menu.addEventListener('click', showMoboileMenu, false);
   closeBtn[0].addEventListener('click', closeMobileMenu, false);
-  closeBtn[1].addEventListener('click', closeSearch, false);
+  // closeBtn[1].addEventListener('click', closeSearch, false);
 
   console.log('你，\n一会看我，\n一会看云，\n我觉得，\n你看我时很远，\n你看云时很近\n');
 })();
